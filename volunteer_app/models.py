@@ -16,6 +16,7 @@ class Session(models.Model):
 
 class VolunteerProfile(models.Model):
     name = models.CharField(max_length=80, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, default='')
     photo = CloudinaryField('image', null= True, default='placeholder')
     bio = models.TextField()
     email = models.EmailField()
