@@ -2,8 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-            
-
 
 class VolunteerProfile(models.Model):
     name = models.CharField(max_length=80, unique=True)
