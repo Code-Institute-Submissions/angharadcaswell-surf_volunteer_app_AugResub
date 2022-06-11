@@ -5,14 +5,22 @@ from cloudinary.models import CloudinaryField
 class Session(models.Model):
     date = models.DateField()
     time = models.TimeField()
-    volunteers = models.ForeignKey('VolunteerProfile', null=True, on_delete=models.SET_NULL)
-    full = models.BooleanField(default=False)
+    volunteers = models.ManyToManyField('VolunteerProfile')
+    status = models.BooleanField(default=False)
 
+    
     def __str__(self):
-        return self.date
+        return str(self.date)
 
     def number_of_volunteers(self):
         return self.volunteers.count()
+
+    def save(self, *args, **kwargs):
+        if self.volunteers.count() >= 10:
+            self.status = True
+        super(Session, self).save(*args, **kwargs)
+            
+
 
 class VolunteerProfile(models.Model):
     name = models.CharField(max_length=80, unique=True)
@@ -20,7 +28,7 @@ class VolunteerProfile(models.Model):
     photo = CloudinaryField('image', null= True, default='placeholder')
     bio = models.TextField()
     email = models.EmailField()
-    sessions = models.ForeignKey('Session', null=True, blank=True, on_delete=models.CASCADE)
+    sessions = models.ManyToManyField('Session')
 
     def __str__(self):
         return str(self.name)

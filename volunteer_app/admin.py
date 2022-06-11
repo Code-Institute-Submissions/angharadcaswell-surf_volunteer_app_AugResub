@@ -4,10 +4,12 @@ from .models import Session, VolunteerProfile
 
 
 @admin.register(VolunteerProfile)
-class PostAdmin(admin.ModelAdmin):
-
+class BioAdmin(admin.ModelAdmin):
+    list_display = ('name', 'slug', 'photo', 'email', 'bio')
+    search_fields = ['name']
     prepopulated_fields = {'slug': ('name',)}
 
-
-# Register your models here.
-admin.site.register(Session)
+@admin.register(Session)
+class SessionAdmin(admin.ModelAdmin):
+    list_display = ('date', 'time', 'status', 'number_of_volunteers')
+    search_fields = ['date']
