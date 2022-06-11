@@ -1,0 +1,101 @@
+body, html {
+    height: 100%;
+    background-color: #388697;
+    
+  }
+
+  h1 {
+    font-family:'Raleway', sans-serif;
+    font-weight: 150;
+    color: #FFF;
+  }
+
+ 
+
+  .nav-custom {
+    background-color: #388697 !important;
+  }
+
+  .nav-custom h1 {
+    font-family:'Raleway', sans-serif;
+    font-weight: 150;
+    color: #FFF;
+  }
+
+  .nav-custom ul {
+    list-style-type:none;
+  }
+
+  .nav-custom li, .nav-custom a{
+    color: #FFF !important;
+    font-family: 'Antic', sans-serif;
+  }
+
+
+
+  /* Home CSS */
+
+.home-css h1 {
+    text-align: center;
+}
+
+.home-css ul {
+    list-style-type:none;
+    text-align: left;
+    color: #FFF !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: #FFF !important;
+}
+.home-css h2 {
+  font-size: 20px;
+  color: #FFF !important;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+#hero-outer {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+
+
+.hero-image{
+    height: 600px;
+      width: 100%;
+
+/* animation of hero image when the page is loading */
+    animation: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/036/858/original/pexels-elle-hughes-1549196_1.png?1654971399') no-repeat center center;
+}
+
+/* Hero image zoom */
+
+@keyframes hero-zoom {
+
+  from {
+      transform: scale(1);
+  }
+
+  to {
+      transform: scale(1.1);
+  }
+}
+
+.cover-text {
+  width: 300px;
+  height: 200px;
+  bottom: 200px;
+  right: 200px;
+  position: absolute !important;
+  background-color: rgba(31, 122, 140, 0.7);
+}
+
+
