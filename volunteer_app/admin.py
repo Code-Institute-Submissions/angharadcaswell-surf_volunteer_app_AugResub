@@ -11,5 +11,5 @@ class BioAdmin(admin.ModelAdmin):
 
 @admin.register(Session)
 class SessionAdmin(admin.ModelAdmin):
-    list_display = ('date', 'time', 'status', 'number_of_volunteers')
+    list_display = ('date', 'time', 'status')
     search_fields = ['date']
