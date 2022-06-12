@@ -13,7 +13,7 @@ class VolunteerList(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(VolunteerList, self).get_context_data(**kwargs)
-        context['session_list'] = Session.objects.all()
+        context['session_list'] = Session.objects.order_by('date')
         return context
 
     
