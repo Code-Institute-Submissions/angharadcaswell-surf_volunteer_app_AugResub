@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" style="max-width:600px">
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1>Volunteer Dashboard</h1>
+    </div>
+    <div class="py-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    {% for volunteer in object_list %}
+                    <p>{{ volunteer.name }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

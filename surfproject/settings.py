@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'home',
+    'volunteer_dashboard',
     'volunteer_app',
 ]
 

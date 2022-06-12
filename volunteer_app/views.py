@@ -9,7 +9,7 @@ from .models import VolunteerProfile
 class VolunteerPortfolio(View):
 
     def get(self, request, slug, *args, **kwargs):
-        queryset = VolunteerProfile.objects
+        queryset = VolunteerProfile.objects.all()
         profile = get_object_or_404(queryset, slug=slug)
 
         return render(
