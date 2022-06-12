@@ -4,7 +4,7 @@
     <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1>Volunteer Dashboard</h1>
     </div>
- 
+    {% if user.is_authenticated %}
     <div class="container-fluid py-2">
         <h2 class="font-weight-light">All Volunteers:</h2>
         <div class="d-flex flex-row flex-nowrap overflow-auto">
@@ -16,7 +16,7 @@
                             <h5 class="card-title">{{ volunteer.name }}</h5>
                             <p class="card-text">{{ volunteer.email }}</p>
                             <p class="card-text">{{ volunteer.bio }}</p>
-                            <a href="#" class="btn btn-primary">View Profile</a>
+                            <a href="#" class="btn btn-primary btn-surf">View Profile</a>
                             </div>
                         </div>
 
@@ -36,6 +36,9 @@
             {% endfor %}  
         </div>
     </div>
+    {% else %}
+    <h2 class="dashboard-signedout">Please sign in or register to view the volunteer dashboard</h2>
+    {% endif %}
 
 
 {% endblock %}

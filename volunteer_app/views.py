@@ -16,14 +16,14 @@ class VolunteerPortfolio(View):
             request,
             "profile.html",
             {
-                "profile": profile
+                "profile": profileForm()
             },
         )
 
 
 
-# edit volunteer profile view
-class EditProfile(CreateView):
-    model= VolunteerProfile
-    form_class= ProfileForm
-    template_name= 'editprofile.html'
+# # edit volunteer profile view
+# class EditProfile(CreateView):
+#     model= VolunteerProfile
+#     form_class= ProfileForm
+#     template_name= 'editprofile.html'

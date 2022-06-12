@@ -108,4 +108,24 @@ a {
   margin-right: 5px;
 }
 
+h2 {
+  font-family:'Raleway', sans-serif;
+    font-weight: 100;
+    color: #FFF;
+
+}
+
+.dashboard-signedout {
+  text-align: center;
+}
+
+.btn-surf {
+  background-color: #8064A2 !important;
+  border: none;
+}
+
+.btn-surf:hover {
+  background-color: grey !important;
+  border: none;
+}
 

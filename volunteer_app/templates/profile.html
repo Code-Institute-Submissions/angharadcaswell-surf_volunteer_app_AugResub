@@ -7,7 +7,11 @@
     <div class="py-5">
         <div class="row">
             <div class="col-12">
-                <h2>Name: {{ profile.name }}</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit">
+                </form>
             </div>
         </div>
     </div>
