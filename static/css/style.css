@@ -99,3 +99,13 @@ a {
 }
 
 
+
+/* Volunteer dashbaord */
+
+.card-body {
+  min-height: 200px;
+  min-width: 300px;
+  margin-right: 5px;
+}
+
+

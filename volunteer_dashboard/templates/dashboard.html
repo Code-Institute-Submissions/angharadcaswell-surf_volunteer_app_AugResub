@@ -1,19 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container" style="max-width:600px">
+<div class="container">
     <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1>Volunteer Dashboard</h1>
     </div>
-    <div class="py-5">
-        <div class="row">
-            <div class="col-12">
-                <div class="row">
-                    {% for volunteer in object_list %}
-                    <p>{{ volunteer.name }}</p>
-                    {% endfor %}
-                </div>
-            </div>
+ 
+    <div class="container-fluid py-2">
+        <h2 class="font-weight-light">All Volunteers:</h2>
+        <div class="d-flex flex-row flex-nowrap overflow-auto">
+            {% for volunteer in object_list %}
+        
+                        <div class="card card-body" >
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                            <h5 class="card-title">{{ volunteer.name }}</h5>
+                            <p class="card-text">{{ volunteer.email }}</p>
+                            <p class="card-text">{{ volunteer.bio }}</p>
+                            <a href="#" class="btn btn-primary">View Profile</a>
+                            </div>
+                        </div>
+
+            {% endfor %}  
         </div>
     </div>
-</div>
+    <div class="container-fluid py-2">
+        <h2 class="font-weight-light">All Sessions:</h2>
+        <div class="d-flex flex-row flex-nowrap overflow-auto">
+            {% for session in object_list %}
+        
+                        <div class="card card-body" >
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                            <h5 class="card-title">{{ session.date }}</h5>
+                            <p class="card-text">{{ session.time }}</p>
+                            <p class="card-text">{{ volunteer.status }}</p>
+                            </div>
+                        </div>
+
+            {% endfor %}  
+        </div>
+    </div>
+
+
 {% endblock %}
