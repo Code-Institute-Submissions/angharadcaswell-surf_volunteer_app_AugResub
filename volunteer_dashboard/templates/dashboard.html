@@ -8,7 +8,7 @@
     <div class="container-fluid py-2">
         <h2 class="font-weight-light">All Volunteers:</h2>
         <div class="d-flex flex-row flex-nowrap overflow-auto">
-            {% for volunteer in object_list %}
+            {% for volunteer in volunteer_list %}
         
                         <div class="card card-body" >
                             <img class="card-img-top" src="..." alt="Card image cap">
@@ -26,15 +26,11 @@
     <div class="container-fluid py-2">
         <h2 class="font-weight-light">All Sessions:</h2>
         <div class="d-flex flex-row flex-nowrap overflow-auto">
-            {% for session in object_list %}
+            {% for session in session_list %}
         
                         <div class="card card-body" >
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
                             <h5 class="card-title">{{ session.date }}</h5>
                             <p class="card-text">{{ session.time }}</p>
-                            <p class="card-text">{{ volunteer.status }}</p>
-                            </div>
                         </div>
 
             {% endfor %}  
