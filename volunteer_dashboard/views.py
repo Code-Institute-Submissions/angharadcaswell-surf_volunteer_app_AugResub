@@ -28,6 +28,7 @@ def add_sessions(request):
         if form.is_valid():
             form.save()
         return redirect('home')
-    return render(request, 'add_sessions.html', {'form' : Sessionform})
+ 
+    return render(request, 'add_sessions.html', {'form' : SessionForm})
 
 
