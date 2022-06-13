@@ -5,7 +5,7 @@ from cloudinary.models import CloudinaryField
 
 class VolunteerProfile(models.Model):
     name = models.CharField(max_length=80, unique=True)
-    slug = models.SlugField(max_length=200, unique=True, default='')
+    slug = models.SlugField(max_length=200, unique=True)
     photo = CloudinaryField('image', null= True, default='placeholder')
     bio = models.TextField()
     email = models.EmailField()

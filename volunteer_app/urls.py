@@ -1,9 +1,8 @@
-from django.urls import path
-from . import views
+# from django.urls import path
+# from .views import VolunteerPortfolio
 
 
-urlpatterns = [
-    path('profile/', views.VolunteerPortfolio.as_view(), name='profile'),
-    # path('editprofile/', views.EditProfile.as_view(), name='edit_profile'),
-]
+# urlpatterns = [
+#     path('<slug:slug>/', VolunteerPortfolio.as_view(), name='profile'),
+# ]
 
