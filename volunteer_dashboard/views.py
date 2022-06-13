@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import generic, View
 from volunteer_app.models import VolunteerProfile, Session
 from .forms import SessionForm
-from django.contrib.auth.decorators import login_required
+
 
 
 class VolunteerList(generic.ListView):
@@ -18,12 +18,16 @@ class VolunteerList(generic.ListView):
         context['session_list'] = Session.objects.order_by('date')
         return context
 
-
-
-@login_required
+def home(request):
+    return HttpResponse("ok")
+    
 def add_sessions(request):
-    form = SessionForm(request.POST, request.FILES)
-    print(request.FILES)
-    return render(request, 'add_sessions.html', {'form' : form})
+    if request.POST:
+        form = SessionForm(request.POST)
+        print(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('home')
+    return render(request, 'add_sessions.html', {'form' : Sessionform})
 
 

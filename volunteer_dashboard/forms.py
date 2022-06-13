@@ -12,7 +12,7 @@ class SessionForm(forms.ModelForm):
     time = forms.TimeField(widget=TimePickerInput)
     class Meta:
         model = Session
-        fields = ('date', 'time',)
+        fields = ['date', 'time',]
         widgets = {
             'date' : DatePickerInput(),
             'time' : TimePickerInput(),
