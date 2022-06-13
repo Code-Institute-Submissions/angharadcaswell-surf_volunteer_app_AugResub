@@ -37,6 +37,10 @@
             {% endfor %}  
         </div>
     </div>
+    {% if user.is_superuser %}
+    
+    <h1>Hi admin</h1>
+{% endif %}
     {% else %}
     <h2 class="dashboard-signedout">Please sign in or register to view the volunteer dashboard</h2>
     {% endif %}
