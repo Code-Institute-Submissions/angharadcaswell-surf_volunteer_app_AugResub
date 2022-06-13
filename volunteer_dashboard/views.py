@@ -18,8 +18,6 @@ class VolunteerList(generic.ListView):
         context['session_list'] = Session.objects.order_by('date')
         return context
 
-def home(request):
-    return HttpResponse("ok")
     
 def add_sessions(request):
     if request.POST:
@@ -27,7 +25,7 @@ def add_sessions(request):
         print(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('home')
+        return redirect('dashboard')
  
     return render(request, 'add_sessions.html', {'form' : SessionForm})
 
