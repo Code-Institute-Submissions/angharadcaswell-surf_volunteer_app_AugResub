@@ -4,14 +4,15 @@ from cloudinary.models import CloudinaryField
 
 
 class VolunteerProfile(models.Model):
+    user = models.OneToOneField(User, null= True, related_name='profile', on_delete=models.CASCADE)
     name = models.CharField(max_length=80, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
-    photo = CloudinaryField('image', null= True, default='placeholder')
+    # slug = models.SlugField(max_length=200, unique=True)
+    photo = CloudinaryField('image', default='placeholder')
     bio = models.TextField()
     email = models.EmailField()
 
     def __str__(self):
-        return str(self.name)
+        return self.user.username
 
 class Session(models.Model):
     date = models.DateField()

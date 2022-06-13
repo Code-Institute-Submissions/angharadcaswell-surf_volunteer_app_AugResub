@@ -17,12 +17,12 @@
                             <h5 class="card-title">{{ volunteer.name }}</h5>
                             <p class="card-text">{{ volunteer.email }}</p>
                             <p class="card-text">{{ volunteer.bio }}</p>
-                            <a href="" class="btn btn-primary btn-surf">View Profile</a>
                             </div>
                         </div>
 
             {% endfor %}  
         </div>
+        <a href="{% url 'profile' %}" class="btn btn-primary btn-surf my-5">Edit Your Profile</a>
     </div>
     <hr>
     <div class="container-fluid py-2">

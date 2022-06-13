@@ -1,7 +1,11 @@
 from django.shortcuts import render, redirect
 from django.views import generic, View
 from .models import VolunteerProfile, Session
-from .forms import SessionForm
+from .forms import SessionForm, ProfileForm, UpdateUserForm
+import PIL 
+from PIL import Image
+from django.contrib.auth.decorators import login_required
+
 
 
 
@@ -29,4 +33,33 @@ def add_sessions(request):
  
     return render(request, 'add_sessions.html', {'form' : SessionForm})
 
+@login_required
+def profile(request):
+    VolunteerProfile.objects.get_or_create(user=request.user)
+    if request.method == 'POST':
+        user_form = UpdateUserForm(request.POST, instance=request.user)
+        profile_form = ProfileForm(request.POST, request.FILES, instance=request.user.profile)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            messages.success(request, 'Your profile is updated successfully')
+            return redirect('dashboard')
+    else:
+        user_form = UpdateUserForm(instance=request.user)
+        profile_form = ProfileForm(instance=request.user.profile)
+
+    return render(request, 'profile.html', {'user_form': user_form,'profile_form' : ProfileForm})
+
+
+
+# def add_profile(request):
+#     if request.POST:
+#         form = ProfileForm(request.POST, request.FILES)
+#         print(request.FILES)
+#         if form.is_valid():
+#             form.save()
+#         return redirect('dashboard')
+ 
+#     return render(request, 'profile.html', {'form' : ProfileForm})
 
