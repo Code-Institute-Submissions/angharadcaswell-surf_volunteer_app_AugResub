@@ -22,19 +22,8 @@ class VolunteerList(generic.ListView):
 
 @login_required
 def add_sessions(request):
-    """ Add session """ 
-    if request.method == 'POST':
-        form = SessionForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            # messages.success(request, f'You have successfully created session')
-            return redirect('volunteer_dashboard')
-        else:
-            messages.error(
-                request,
-                'Please ensure all fields are filled out correctly.'
-                )
-
-    return render(request, 'add_sessions.html', {})
+    form = SessionForm(request.POST, request.FILES)
+    print(request.FILES)
+    return render(request, 'add_sessions.html', {'form' : form})
 
 
