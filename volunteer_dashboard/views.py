@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import generic, View
 from volunteer_app.models import VolunteerProfile, Session
 from .forms import SessionForm
+from django.contrib.auth.decorators import login_required
 
 
 class VolunteerList(generic.ListView):
@@ -17,22 +18,23 @@ class VolunteerList(generic.ListView):
         context['session_list'] = Session.objects.order_by('date')
         return context
 
-    def edit_session_profile(request):
-        session_form = forms.SessionForm()
-        profile_form = forms.ProfileForm()
-        if request.method == 'POST':
-            if 'session_form' in request.POST:
-                session_form = forms.SessionForm(request.POST)
-                if session_form.is_valid():
-                    session_form.save()
-                    return redirect('home')
-            if 'profile_form' in request.POST:
-                profile_form = forms.ProfileForm(request.POST)
-                if profile_form.is_valid():
-                    profile_form.save()
-                    return redirect('home')
-        context = {
-            'session_form': session_form,
-            'profile_form': profile_form,
-        }
-        return render(request, 'add_session_profile.html', context=context)
+
+
+@login_required
+def add_sessions(request):
+    """ Add session """ 
+    if request.method == 'POST':
+        form = SessionForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            # messages.success(request, f'You have successfully created session')
+            return redirect('volunteer_dashboard')
+        else:
+            messages.error(
+                request,
+                'Please ensure all fields are filled out correctly.'
+                )
+
+    return render(request, 'add_sessions.html', {})
+
+

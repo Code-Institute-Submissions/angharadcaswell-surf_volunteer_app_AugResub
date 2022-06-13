@@ -24,6 +24,7 @@
             {% endfor %}  
         </div>
     </div>
+    <hr>
     <div class="container-fluid py-2">
         <h2 class="font-weight-light">All Sessions:</h2>
         <div class="d-flex flex-row flex-nowrap overflow-auto">
@@ -39,8 +40,9 @@
     </div>
     {% if user.is_superuser %}
     
-    <h1>Add Session:</h1>
-    {% include 'components/add_session_profile.html' %}
+    <hr>
+    <h2>Admin:</h2>
+    <a href="{% url 'addsessions' %}" class="btn btn-primary btn-surf">Add Session</a>
 {% endif %}
     {% else %}
     <h2 class="dashboard-signedout">Please sign in or register to view the volunteer dashboard</h2>
