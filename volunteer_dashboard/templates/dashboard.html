@@ -39,7 +39,8 @@
     </div>
     {% if user.is_superuser %}
     
-    <h1>Hi admin</h1>
+    <h1>Add Session:</h1>
+    {% include 'components/add_session.html' %}
 {% endif %}
     {% else %}
     <h2 class="dashboard-signedout">Please sign in or register to view the volunteer dashboard</h2>
