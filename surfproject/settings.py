@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'home',
     'volunteer_dashboard',
-    'volunteer_app',
+
 ]
 
 SITE_ID = 1

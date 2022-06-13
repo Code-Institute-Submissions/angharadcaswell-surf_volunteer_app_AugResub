@@ -1,4 +1,4 @@
-from volunteer_app.models import Session, VolunteerProfile
+from .models import Session, VolunteerProfile
 from django import forms
 
 class DatePickerInput(forms.DateInput):
