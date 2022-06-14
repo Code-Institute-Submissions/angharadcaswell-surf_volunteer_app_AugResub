@@ -139,3 +139,22 @@ h2 {
   background-color: cadetblue;
   padding: 20px;
 }
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 30px !important;
+    text-align: center;
+    padding: 10px 10px !important;
+  }
+  h3 {
+    font-size: 15px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 15px;
+    text-align: center;
+    padding: 5px 5px;
+  }
+}
