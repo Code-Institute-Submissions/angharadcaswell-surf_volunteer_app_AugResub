@@ -73,11 +73,24 @@ The design for the dashboard is simple and functional.
 # 4. Features
 
 ## 4.1 All features
-
+### Homepage:
+![Homepage](/readmeimages/Homepage.png)
+### Dashboard- Sessions (logged in as admin)
+![Dashboard](/readmeimages/session_dashboard.png)
+### Dashboard- Profiles
+![Dashboard](/readmeimages/profile_dashboard.png)
+### Add Sessions
+![Dashboard](/readmeimages/add_session.png)
+### Add Profile
+![Dashboard](/readmeimages/add_profile.png)
 
 
 
 ## 4.2 Features to implement:
+
+1. Lead volunteer the ability to edit and delete sessions. 
+2. Lead volunteer to be able to assign volunteers to sessions (currently only possible in admin panel).
+3. Messaging platform for lead volunteer to be able to send news and information. 
 
 
 # 5. Technologies used 
@@ -95,21 +108,14 @@ message.
 # 6. Testing  
 The sit was tested in Gitpod terminal and Heroku by users and myself on all browsers. The game was also peer reviewed by the Code Institute community. 
 
-## 6.1 Bugs
+## 6.3 User testing:
+Users were asked to navigate around the site and also to make intentional mistakes to help check for errors.
+Users had tasks to complete, which included some of the following:
 
-
-## 6.2 User testing:
-The following issues were discovered during user testing. Users were asked to navigate around the site and also to make intentional mistakes to help check for errors.
-
-They were asked in particular to complete the following tasks:
-
-1. Add something to your basket 
-
-
-- Issue: 
-- **Solution: 
-
-[User Stories Tested](userstories.md)
+1. Register and log into the site. 
+2. Add your photo and bio to profile.
+3. Using the admin log in, add a session to the dashboard. 
+4. Update your use bio. 
 
 ## 6.3 Code Validation
 - Used [PEP8 Python Validator](http://pep8online.com/) to check all Python content files. Each file recieved "All Right".
