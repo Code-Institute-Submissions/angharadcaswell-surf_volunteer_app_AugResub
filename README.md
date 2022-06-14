@@ -112,7 +112,7 @@ They were asked in particular to complete the following tasks:
 [User Stories Tested](userstories.md)
 
 ## 6.3 Code Validation
-- Used [PEP8 Python Validator](http://pep8online.com/) to check Python content.
+- Used [PEP8 Python Validator](http://pep8online.com/) to check all Python content files. Each file recieved "All Right".
 
 
 
