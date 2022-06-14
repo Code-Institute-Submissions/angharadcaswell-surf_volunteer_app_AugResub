@@ -1,7 +1,7 @@
 # Toni Smith Paints
 ![Mock up of home]()
 
-[Link to LIVE shop]()
+[Link to LIVE dashboard](https://surf-project-app.herokuapp.com/)
 
 # Table of Contents:
 
@@ -21,6 +21,19 @@ The aim of this project is to create a volunteer dashboard for a (fictional) cha
 # 2. User Experience
 
 ## 2.1 User Stories 
+
+### Lead volunteer:
+
+1. As a lead volunteer, I need to be able to upload a photo of myself and bio so that other volunteers can familiarise themselves with my face.
+2. As a lead volunteer, I need to be able to add sessions (date, time) to the dashbaord, so the volunteers can see the upcoming sessions. 
+3. As a lead volunteer, I need to be able to use the app on my phone, so I can be updated and sign up for sesssions on the go. 
+
+### Volunteer:
+
+1. As a volunteer, I need to be able to upload a photo of myself and bio so that other volunteers can familiarise themselves with my face.
+2. As a volunteer, I need to be able to see sessions (date, time) on the dashbaord, so I can see the upcoming sessions. 
+3. As a volunteer, I need to be able to use the app on my phone, so I can be updated and sign up for sesssions on the go. 
+
 
 ## 2.2 Structure
 

@@ -27,7 +27,6 @@ class VolunteerList(generic.ListView):
 def add_sessions(request):
     if request.POST:
         form = SessionForm(request.POST)
-        print(request.POST)
         if form.is_valid():
             form.save()
         return redirect('dashboard')
@@ -43,7 +42,7 @@ def profile(request):
 
         if user_form.is_valid() and profile_form.is_valid():
             # profile_form.instance.email = request.user.email
-            # profile_form.instance.name = request.user.username
+            # profile_form.name = request.user.username
             user_form.save()
             profile_form.save()
             messages.success(request, 'Your profile is updated successfully')

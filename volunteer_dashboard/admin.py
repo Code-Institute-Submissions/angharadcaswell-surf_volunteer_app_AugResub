@@ -1,10 +1,11 @@
 from django.contrib import admin
-from .models import Session, VolunteerProfile
+from .models import Session, VolunteerProfile, User
 
 
 @admin.register(VolunteerProfile)
 class BioAdmin(admin.ModelAdmin):
-    list_display = ('photo', 'email', 'bio')
+    list_display = ('name', 'photo', 'email', 'bio')
+
 
 
 @admin.register(Session)

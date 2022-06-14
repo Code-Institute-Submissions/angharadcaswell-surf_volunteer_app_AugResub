@@ -22,20 +22,22 @@
 
             {% endfor %}  
         </div>
-        <a href="{% url 'profile' %}" class="btn btn-primary btn-surf my-5">Edit Your Profile</a>
+        <a href="{% url 'profile' %}" class="btn btn-primary btn-surf my-5">Add/ Edit Your Profile</a>
     </div>
     <hr>
     <div class="container-fluid py-2">
         <h2 class="font-weight-light">All Sessions:</h2>
         <div class="d-flex flex-row flex-nowrap overflow-auto">
             {% for session in session_list %}
-        
-                        <div class="card card-body" >
-                            <h5 class="card-title">{{ session.date }}</h5>
-                            <p class="card-text">{{ session.time }}</p>
-                        </div>
+                {% if session.upcoming_date %}
+                    <div class="card card-body" >
+                        <h5 class="card-title">{{ session.date|date:"d M Y" }}</h5>
+                        <p class="card-text">{{ session.time }}</p>
+                    </div>
+                {% endif %}
 
             {% endfor %}  
+            
         </div>
     </div>
     {% if user.is_superuser %}
