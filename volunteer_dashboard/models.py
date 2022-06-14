@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 
 class VolunteerProfile(models.Model):
     user = models.OneToOneField(User, null= True, related_name='profile', on_delete=models.CASCADE)
+    name = models.CharField(max_length=80, null= True)
     photo = CloudinaryField('image', default='placeholder')
     bio = models.TextField()
     email = models.EmailField()
