@@ -1,5 +1,5 @@
-# Toni Smith Paints
-![Mock up of home]()
+# Project Surf
+![Homepage](/readmeimages/Homepage.png)
 
 [Link to LIVE dashboard](https://surf-project-app.herokuapp.com/)
 
@@ -40,8 +40,7 @@ The aim of this project is to create a volunteer dashboard for a (fictional) cha
 ## 2.2 Structure
 
 ### Models
-![Session Model]()
-![Volunteer Model]()
+![Volunteer Model](/readmeimages/models.png)
 
 ### Site Map
 ![Site map](/readmeimages/Sitemap.png)
@@ -57,7 +56,7 @@ The aim of this project is to create a volunteer dashboard for a (fictional) cha
 ### Add Session/Desktop (logged in as admin)
 ![Dashboard](/readmeimages/Add_session_desktop.png)
 ## 2.4 Design
-The design for the dashboard is simple and functional. 
+The design for the dashboard is simple and functional. I added a hero image to ignite some excitment to the dashbaord. The colors are fitting with the simple design and also the theme of surfing and being in the water. 
 
 # 3. Sprints
 
@@ -91,6 +90,8 @@ The design for the dashboard is simple and functional.
 1. Lead volunteer the ability to edit and delete sessions. 
 2. Lead volunteer to be able to assign volunteers to sessions (currently only possible in admin panel).
 3. Messaging platform for lead volunteer to be able to send news and information. 
+4. Show name and email address on profile section of dashboard. 
+5. Add FAQS page
 
 
 # 5. Technologies used 
@@ -108,7 +109,7 @@ message.
 # 6. Testing  
 The sit was tested in Gitpod terminal and Heroku by users and myself on all browsers. The game was also peer reviewed by the Code Institute community. 
 
-## 6.3 User testing:
+## 6.1 User testing:
 Users were asked to navigate around the site and also to make intentional mistakes to help check for errors.
 Users had tasks to complete, which included some of the following:
 
@@ -117,6 +118,10 @@ Users had tasks to complete, which included some of the following:
 3. Using the admin log in, add a session to the dashboard. 
 4. Update your use bio. 
 
+## 6.2 Bugs:
+
+1. During testing, a user noticed that the profile name on the profile section on the dashboard isn't showing. This has been added as a future feature. 
+
 ## 6.3 Code Validation
 - Used [PEP8 Python Validator](http://pep8online.com/) to check all Python content files. Each file recieved "All Right".
 
@@ -124,13 +129,46 @@ Users had tasks to complete, which included some of the following:
 
 # 7. Deployment
 
-Steps for deployment:
-1. 
+To deploy this page to Heroku from its GitHub repository, the following steps were taken:
 
+1. Create the Heroku App:
+- Select "Create new app" in Heroku.
+- Choose a name for your app and select the location.
 
+2. Attach the Postgres database:
+- In the Resources tab, under add-ons, type in Postgres and select the Heroku Postgres option.
+
+3. Prepare the environment and settings.py file:
+
+- In the Settings tab, click on Reveal Config Vars and copy the url next to DATABASE_URL.
+- In your GitPod workspace, create an env.py file in the main directory.
+- Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file.
+- Add the SECRET_KEY value to the Config Vars in Heroku.
+- Update the settings.py file to import the env file and add the SECRETKEY and DATABASE_URL file paths.
+- Update the Config Vars with the Cloudinary url, adding into the settings.py file also.
+- In settings.py add the following sections:
+Cloudinary to the INSTALLED_APPS list
+STATICFILE_STORAGE
+STATICFILES_DIRS
+STATIC_ROOT
+MEDIA_URL
+DEFAULT_FILE_STORAGE
+TEMPLATES_DIR
+Update DIRS in TEMPLATES with TEMPLATES_DIR
+Update ALLOWED_HOSTS with ['app_name.heroku.com', 'localhost']
+4. Store Static and Media files in Cloudinary and Deploy to Heroku:
+
+- Create three directories in the main directory; media, static and templates.
+- Create a file named "Procfile" in the main directory and add the following:
+- web: gunicorn project-name.wsgi
+- Log in to Heroku using the terminal heroku login -i.
+- Then run the following command: heroku git:remote -a vegan-a-eat. This will link the app to the Gitpod terminal.
+- After linking your app to your workspace, you can then deploy new versions of the app by running the command git push 
+heroku main and your app will be deployed to Heroku.
 
 # 8. Credits
-
+- Free images: [free image website](https://www.pexels.com/search/surfing/?orientation=landscape)
+- Stackoverflow: [Stackoverflow](https://stackoverflow.com/)
 
 
 ## Acknowledgments: 
