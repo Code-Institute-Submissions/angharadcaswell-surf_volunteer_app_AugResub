@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container">
+<div class="centre_div">
     <div class="container">
         <div class="row">
           <div class="col-sm-6">
@@ -10,7 +10,7 @@
             <form method="post" action="{% url 'add_sessions' %}" enctype="multipart/form-data" >
                 {{ form | crispy }}
                 {% csrf_token %}
-                <button type="submit" >Save</button>
+                <button type="submit"class="btn-surf" >Save</button>
             </form>
           </div>
         </div>

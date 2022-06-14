@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import generic, View
 from .models import VolunteerProfile, Session
 from .forms import SessionForm, ProfileForm, UpdateUserForm
+from django.contrib import messages
 import PIL 
 from PIL import Image
 from django.contrib.auth.decorators import login_required
@@ -50,16 +51,4 @@ def profile(request):
         profile_form = ProfileForm(instance=request.user.profile)
 
     return render(request, 'profile.html', {'user_form': user_form,'profile_form' : ProfileForm})
-
-
-
-# def add_profile(request):
-#     if request.POST:
-#         form = ProfileForm(request.POST, request.FILES)
-#         print(request.FILES)
-#         if form.is_valid():
-#             form.save()
-#         return redirect('dashboard')
- 
-#     return render(request, 'profile.html', {'form' : ProfileForm})
 

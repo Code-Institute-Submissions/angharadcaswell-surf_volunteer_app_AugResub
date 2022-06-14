@@ -37,14 +37,6 @@
                 </ul>
                 <span class="navbar-text text-muted">
                     <ul class="text-center justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href=""><i class="fas fa-user fa-lg"></i></a>
-                        </li>
-                        <li>
-                            <a class="nav-link" aria-current="page" href="{% url 'dashboard' %}">
-                                <i class="fa-solid fa-water"></i>
-                            </a>
-                        </li>
                         {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>

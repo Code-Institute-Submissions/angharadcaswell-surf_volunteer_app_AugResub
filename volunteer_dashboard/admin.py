@@ -4,9 +4,8 @@ from .models import Session, VolunteerProfile
 
 @admin.register(VolunteerProfile)
 class BioAdmin(admin.ModelAdmin):
-    list_display = ('name', 'photo', 'email', 'bio')
-    search_fields = ['name']
-    # prepopulated_fields = {'slug': ('name',)}
+    list_display = ('photo', 'email', 'bio')
+
 
 @admin.register(Session)
 class SessionAdmin(admin.ModelAdmin):
