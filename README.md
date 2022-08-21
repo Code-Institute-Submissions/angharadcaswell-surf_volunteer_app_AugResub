@@ -16,7 +16,7 @@
 
 
 # 1. Project Goals
-The aim of this project is to create a volunteer dashboard for a (fictional) charity called Project Surf. The users will include volunteers and the lead volunteer (admin). 
+The aim of this project is to create an MVP application for a volunteer dashboard for a (fictional) charity called Project Surf. The users will include volunteers and the lead volunteer (admin). 
 
 
 # 2. User Experience
@@ -107,7 +107,7 @@ message.
 
 
 # 6. Testing  
-The sit was tested in Gitpod terminal and Heroku by users and myself on all browsers. The game was also peer reviewed by the Code Institute community. 
+The site was tested in Gitpod terminal and Heroku by users and myself on all browsers. The site was also peer reviewed by the Code Institute community. 
 
 ## 6.1 User testing:
 Users were asked to navigate around the site and also to make intentional mistakes to help check for errors.
