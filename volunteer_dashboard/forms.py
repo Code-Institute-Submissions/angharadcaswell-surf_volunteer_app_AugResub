@@ -45,4 +45,4 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = VolunteerProfile
-        fields = ['name','photo', 'bio']
+        fields = ['name', 'photo', 'bio']
