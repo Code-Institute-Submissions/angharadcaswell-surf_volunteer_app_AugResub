@@ -12,7 +12,9 @@
             {% for volunteer in volunteer_list %}
         
                         <div class="card card-body" >
-                            <img src=" {{ volunteer.photo.url }}" width="100%">
+                            <img src=" {{ volunteer.photo.url }}" width="100%" height="200">
+                            <br>
+                            <hr>
                             <h5 class="card-title">{{ volunteer.name }}</h5>
                             <p class="card-text">{{ volunteer.email }}</p>
                             <p class="card-text">{{ volunteer.bio }}</p>
