@@ -134,10 +134,12 @@ h2 {
 /* User form */
 
 .centre_div {
-  margin: auto;
-  width: 30%;
+  /* margin: auto;
+  width: 30%; */
   background-color: cadetblue;
-  padding: 20px;
+
+  /* padding: 20px;
+  margin: 20px; */
 }
 
 @media (max-width: 900px) {
