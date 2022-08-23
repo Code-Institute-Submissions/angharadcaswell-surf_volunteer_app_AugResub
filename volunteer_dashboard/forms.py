@@ -39,9 +39,10 @@ class UpdateUserForm(forms.ModelForm):
 
 
 class ProfileForm(forms.ModelForm):
+    name = forms.TextInput()
     photo = forms.ImageField()
     bio = forms.TextInput()
 
     class Meta:
         model = VolunteerProfile
-        fields = ['photo', 'bio']
+        fields = ['name','photo', 'bio']
