@@ -8,7 +8,7 @@
     {% if user.is_authenticated %}
     <div class="container-fluid py-2">
         <h2 class="font-weight-light">All Volunteers:</h2>
-        <div class="d-flex flex-row flex-nowrap overflow-auto">
+        <div class="d-flex flex-row flex-nowrap overflow-auto text-white">
             {% for volunteer in volunteer_list %}
         
                         <div class="card card-body" >
@@ -30,7 +30,8 @@
         <div class="d-flex flex-row flex-nowrap overflow-auto">
             {% for session in session_list %}
                 {% if session.upcoming_date %}
-                    <div class="card card-body" >
+                    <div class="card card-body text-center text-white pt-5" >
+                        <i class="far fa-calendar-alt py-2"></i>
                         <h5 class="card-title">{{ session.date|date:"d M Y" }}</h5>
                         <p class="card-text">{{ session.time }}</p>
                     </div>
