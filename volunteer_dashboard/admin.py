@@ -4,7 +4,7 @@ from .models import Session, VolunteerProfile
 
 @admin.register(VolunteerProfile)
 class BioAdmin(admin.ModelAdmin):
-    list_display = ('name', 'photo', 'email', 'bio')
+    list_display = ('user', 'name', 'photo', 'email', 'bio')
 
 
 @admin.register(Session)
