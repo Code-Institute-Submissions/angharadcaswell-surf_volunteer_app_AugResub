@@ -56,4 +56,25 @@ class DeleteSession(generic.DeleteView):
     model = Session
     success_url = reverse_lazy('dashboard')
     success_message = "Session successfully deleted!"
-    template_name = "session_confirm_delete.html"
+    template_name = "delete_sessions.html"
+
+class EditSession(generic.UpdateView):
+
+    model = Session
+    fields = [
+         'date',
+         'time',
+         'volunteers',
+    ]
+    success_url = reverse_lazy('dashboard')
+    success_message = "You updated the session"
+    template_name = "edit_sessions.html"
+
+    def form_valid(self, form):
+        """
+        Validate form
+        Save and return the new object
+        """
+        form.save()
+        return super().form_valid(form)
+

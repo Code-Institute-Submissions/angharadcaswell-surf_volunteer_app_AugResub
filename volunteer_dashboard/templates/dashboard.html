@@ -35,7 +35,7 @@
                         <h5 class="card-title">{{ session.date|date:"d M Y" }}</h5>
                         <p class="card-text">{{ session.time }}</p>
                         {% if user.is_superuser %}
-                        <a href="{% url 'profile' %}" class="btn btn-primary btn-surf my-2">Edit</a>
+                        <a href="{% url 'edit_session' session.pk %}" class="btn btn-primary btn-surf my-2">Edit</a>
                         <a href="{% url 'delete_session' session.pk %}">
                             <button class="btn btn-danger">Delete</button>
                           </a>
