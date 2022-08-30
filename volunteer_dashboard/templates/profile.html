@@ -14,14 +14,14 @@
             <p class="card-text">Bio: {{ user.profile.bio }}</p>
         </div>
       </div>
-      <div class="col-sm centre_div">
+      <div class="col-sm centre_div text-white">
         <h2 class="my-3 ">Edit Profile:</h2>
-        <form method="post" class="form-row text-white">
-                {{ user_form | crispy }}
-                {{ profile_form | crispy }}
+        <form method="post">
+                {% crispy user_form %}
+                <hr>
+                {% crispy profile_form %}
                 {% csrf_token %}
-        <br><br>
-        <button type="submit" class="btn btn-surf ">Save Changes</button>
+        <button type="submit" class="btn btn-surf my-2">Save Changes</button>
     </form> 
       </div>
 

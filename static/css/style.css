@@ -56,6 +56,10 @@ a {
   text-decoration: none !important;
   color: #FFF !important;
 }
+
+form a {
+  color: #495057 !important;
+}
 .home-css h2 {
   font-size: 20px;
   color: #FFF !important;
