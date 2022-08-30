@@ -56,7 +56,7 @@
                             <li>{{ name }}</li>
                             {% endfor %}
                         </ol>
-                        {% if session.volunteers.all|length == 8 %}
+                        {% if session.number_of_volunteers == 8 %}
                             <p class="full-session">Full session</p>
                         {% endif %}
                     </div>

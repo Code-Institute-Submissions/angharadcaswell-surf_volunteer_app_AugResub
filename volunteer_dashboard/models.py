@@ -26,3 +26,6 @@ class Session(models.Model):
     @property
     def upcoming_date(self):
         return date.today() < self.date
+
+    def number_of_volunteers(self):
+        return self.volunteers.count()
