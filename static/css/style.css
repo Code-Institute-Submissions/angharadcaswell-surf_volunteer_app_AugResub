@@ -187,6 +187,11 @@ img {
   text-align: left;
 }
 
+.full-session {
+  color: red;
+  text-transform: uppercase;
+}
+
 
 /* User form */
 

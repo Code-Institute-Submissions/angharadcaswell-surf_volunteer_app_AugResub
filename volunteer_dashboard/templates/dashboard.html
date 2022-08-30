@@ -51,11 +51,14 @@
                         <br>
                         <i class="fas fa-user fa-lg mb-2"></i> 
                         <p class="card-text">Volunteers booked:</p>
-                        <ul class="session_volunteer_list">
+                        <ol class="session_volunteer_list">
                             {% for name in session.volunteers.all %}
                             <li>{{ name }}</li>
                             {% endfor %}
-                        </ul>
+                        </ol>
+                        {% if session.volunteers.all|length == 8 %}
+                            <p class="full-session">Full session</p>
+                        {% endif %}
                     </div>
                 {% endif %}
 
