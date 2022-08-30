@@ -5,6 +5,8 @@
     <div class="row">
       <div class="col-sm">
         <div class="card card-body text-white" >
+          <h2 class="my-3 ">Your Profile:</h2>
+        <hr>
             <img src=" {{ user.profile.photo.url }}" class="dashboard-profile-img">
             <br>
             <hr>
@@ -14,17 +16,19 @@
             <p class="card-text">Bio: {{ user.profile.bio }}</p>
         </div>
       </div>
-      <div class="col-sm centre_div text-white">
+        <div class="col-sm">
+      <div class="card card-body text-white">
         <h2 class="my-3 ">Edit Profile:</h2>
-        <form method="post">
-                {% crispy user_form %}
-                <hr>
-                {% crispy profile_form %}
+        <hr>
+        <form method="post" enctype="multipart/form-data">
+                {{ user_form|crispy }}
+                  <hr>
+                {{ profile_form|crispy }}
                 {% csrf_token %}
         <button type="submit" class="btn btn-surf my-2">Save Changes</button>
     </form> 
       </div>
-
     </div>
+  </div>
   </div>
 {% endblock %}
