@@ -13,6 +13,8 @@ class VolunteerProfile(models.Model):
     email = models.EmailField()
 
     def __str__(self):
+        if not self.user:
+            return "Anonymous"
         return self.user.username
 
 class Session(models.Model):
