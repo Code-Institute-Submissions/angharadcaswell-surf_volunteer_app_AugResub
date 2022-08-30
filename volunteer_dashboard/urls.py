@@ -5,5 +5,6 @@ from .views import VolunteerList, profile
 urlpatterns = [
     path('', VolunteerList.as_view(), name='dashboard'),
     path('add_sessions/', views.add_sessions, name='add_sessions'),
-    path('profile/', profile, name='profile')
+    path('profile/', profile, name='profile'),
+    path('delete_session/<int:pk>/', views.DeleteSession.as_view(), name='delete_session')
 ]

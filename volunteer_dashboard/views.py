@@ -1,9 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from .models import VolunteerProfile, Session
 from .forms import SessionForm, ProfileForm, UpdateUserForm
 from django.contrib import messages
-
+from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 
 
@@ -50,3 +50,10 @@ def profile(request):
 
     return render(request, 'profile.html', {'user_form': user_form,
                                             'profile_form': profile_form})
+
+
+class DeleteSession(generic.DeleteView):
+    model = Session
+    success_url = reverse_lazy('dashboard')
+    success_message = "Session successfully deleted!"
+    template_name = "session_confirm_delete.html"

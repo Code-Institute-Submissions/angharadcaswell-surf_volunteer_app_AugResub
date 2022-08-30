@@ -34,6 +34,10 @@
                         <i class="far fa-calendar-alt py-2"></i>
                         <h5 class="card-title">{{ session.date|date:"d M Y" }}</h5>
                         <p class="card-text">{{ session.time }}</p>
+                        <a href="{% url 'profile' %}" class="btn btn-primary btn-surf my-2">Edit</a>
+                        <a href="{% url 'delete_session' session.pk %}">
+                            <button class="btn btn-danger">Delete</button>
+                          </a>
                         <hr>
                         <i class="fas fa-user fa-lg"></i> 
                         <p class="card-text">Volunteers booked:</p>
