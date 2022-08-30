@@ -31,17 +31,25 @@
             {% for session in session_list %}
                 {% if session.upcoming_date %}
                     <div class="card card-body text-center text-white pt-5" >
-                        <i class="far fa-calendar-alt py-2"></i>
-                        <h5 class="card-title">{{ session.date|date:"d M Y" }}</h5>
+                        <i class="far fa-calendar-alt py-2 calender-icon"></i>
+                        <h3 class="card-title">{{ session.date|date:"d M Y" }}</h5>
                         <p class="card-text">{{ session.time }}</p>
                         {% if user.is_superuser %}
-                        <a href="{% url 'edit_session' session.pk %}" class="btn btn-primary btn-surf my-2">Edit</a>
-                        <a href="{% url 'delete_session' session.pk %}">
-                            <button class="btn btn-danger">Delete</button>
-                          </a>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href="{% url 'edit_session' session.pk %}" class="btn btn-primary btn-surf btn-edit">Edit</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="{% url 'delete_session' session.pk %}"><button class="btn btn-danger btn-delete">Delete</button>
+                                  </a>
+                            </div>
+                        </div>
                           {% endif %} 
+                        <br>
                         <hr>
-                        <i class="fas fa-user fa-lg"></i> 
+
+                        <br>
+                        <i class="fas fa-user fa-lg mb-2"></i> 
                         <p class="card-text">Volunteers booked:</p>
                         <ul class="session_volunteer_list">
                             {% for name in session.volunteers.all %}

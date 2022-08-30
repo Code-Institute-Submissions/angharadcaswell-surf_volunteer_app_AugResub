@@ -151,10 +151,18 @@ h2 {
   border: none;
   color: black !important;
 }
+.btn-edit, .btn-delete {
+  width: 90%;
+  margin: auto;
+}
 
 .btn-surf:hover {
   background-color: grey !important;
   border: none;
+}
+
+.calender-icon {
+  font-size: 40px;
 }
 
 img {
