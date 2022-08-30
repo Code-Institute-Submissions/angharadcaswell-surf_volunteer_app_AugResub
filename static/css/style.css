@@ -10,7 +10,14 @@ body, html {
     color: #FFF;
   }
 
- 
+ .project-header-logo {
+  float: left;
+ }
+
+ .project-header-links {
+  float: right;
+  margin-left: 800px;
+ }
 
   .nav-custom {
     background-color: #388697 !important;

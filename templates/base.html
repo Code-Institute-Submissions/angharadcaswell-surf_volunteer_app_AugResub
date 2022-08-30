@@ -53,20 +53,17 @@
                     </ul>
                 </ul>
       
-            <a class="navbar-brand d-none d-md-block" href="{% url 'home' %}"><h1>PROJECT SURF</h1></a>
+            
            
-            <div class="collapse navbar-collapse d-none d-md-block" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class=" d-none d-md-block">
+                <a class="project-header-logo" href="{% url 'home' %}"><h1>PROJECT SURF</h1></a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 project-header-links">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'dashboard' %}">Volunteer Dashboard</a>
                     </li>
-                    
-                </ul>
-                <span class="navbar-text text-muted">
-                    <ul class="text-center justify-content-end">
                         {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a href="{% url 'profile' %}" class="nav-link"><img src=" {{ user.profile.photo.url }}" class="header-profile-img"></a>
+                        <a href="{% url 'profile' %}" class="nav-link">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -82,7 +79,6 @@
                     
                     {% endif %}
                     </ul>
-                </span>
             </div>
         </div>
     </nav>
