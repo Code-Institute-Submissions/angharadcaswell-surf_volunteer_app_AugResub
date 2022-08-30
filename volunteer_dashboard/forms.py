@@ -11,17 +11,21 @@ class TimePickerInput(forms.TimeInput):
     input_type = 'time'
 
 
+
 class SessionForm(forms.ModelForm):
     date = forms.DateField(widget=DatePickerInput)
     time = forms.TimeField(widget=TimePickerInput)
 
     class Meta:
         model = Session
-        fields = ['date', 'time', ]
+        fields = ['date', 'time', 'volunteers']
         widgets = {
             'date': DatePickerInput(),
             'time': TimePickerInput(),
         }
+        volunteers = forms.ModelMultipleChoiceField(
+        queryset=VolunteerProfile.objects.all()
+       )
 
 
 class UpdateUserForm(forms.ModelForm):

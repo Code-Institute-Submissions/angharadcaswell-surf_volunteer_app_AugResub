@@ -34,6 +34,14 @@
                         <i class="far fa-calendar-alt py-2"></i>
                         <h5 class="card-title">{{ session.date|date:"d M Y" }}</h5>
                         <p class="card-text">{{ session.time }}</p>
+                        <hr>
+                        <i class="fas fa-user fa-lg"></i> 
+                        <p class="card-text">Volunteers booked:</p>
+                        <ul class="session_volunteer_list">
+                            {% for name in session.volunteers.all %}
+                            <li>{{ name }}</li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 {% endif %}
 

@@ -160,6 +160,10 @@ img {
   height: 50px;
 }
 
+.session_volunteer_list li {
+  text-align: left;
+}
+
 
 /* User form */
 
