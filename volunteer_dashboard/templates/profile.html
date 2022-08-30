@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
       <div class="col-sm">
-        <div class="card card-body" >
+        <div class="card card-body text-white" >
             <img src=" {{ user.profile.photo.url }}" class="dashboard-profile-img">
             <br>
             <hr>
@@ -15,15 +15,11 @@
         </div>
       </div>
       <div class="col-sm centre_div">
-
         <h2 class="my-3 ">Edit Profile:</h2>
-
-        <form method="post" enctype="multipart/form-data" class="form-row">
-        {% csrf_token %}
-
-                {{ user_form|crispy }}
-                
-                {{ profile_form|crispy }}
+        <form method="post" class="form-row text-white">
+                {{ user_form | crispy }}
+                {{ profile_form | crispy }}
+                {% csrf_token %}
         <br><br>
         <button type="submit" class="btn btn-surf ">Save Changes</button>
     </form> 
