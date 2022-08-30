@@ -96,7 +96,7 @@ As seen in the image below, I used a kanban board to track the progress of my ti
 ### Session- Delete Session (logged in as admin)
 ![Dashboard](/readmeimages/delete_session.png)
 ### Session- Edit Session (logged in as admin)
-![Dashboard](/readmeimages/delete_session.png)
+![Dashboard](/readmeimages/edit_session.png)
 ### Dashboard- Full Session (logged in as admin)
 ![Dashboard](/readmeimages/full_session.png)
 ### Profile - Add Profile
