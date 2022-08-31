@@ -85,22 +85,7 @@ As seen in the image below, I used a kanban board to track the progress of my ti
 # 4. Features
 
 ## 4.1 All features
-### Homepage:
-![Homepage](/readmeimages/Homepage.png)
-### Dashboard- Sessions on Dashboard (logged in as admin)
-![Dashboard](/readmeimages/session_dashboard.png)
-### Dashboard- Profiles on Dashboard:
-![Dashboard](/readmeimages/profile_dashboard.png)
-### Dashboard- Add Session (logged in as admin)
-![Dashboard](/readmeimages/add_session.png)
-### Session- Delete Session (logged in as admin)
-![Dashboard](/readmeimages/delete_session.png)
-### Session- Edit Session (logged in as admin)
-![Dashboard](/readmeimages/edit_session.png)
-### Dashboard- Full Session (logged in as admin)
-![Dashboard](/readmeimages/full_session.png)
-### Profile - Add Profile
-![Dashboard](/readmeimages/add_profile1.png)
+[Current Features](features.md)
 
 
 
@@ -168,7 +153,7 @@ These significant bugs were found during user testing and during the build proce
 [Code Validation](codevalidation.md)
 
 ## 6.4 Performance testing
-![Lighthouse](/readmeimages/lighthouse.png)
+[Lighthouse](performance.md)
 
 
 
