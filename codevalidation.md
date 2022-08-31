@@ -50,27 +50,39 @@
 # [HTML Validator](https://validator.w3.org/#validate_by_input) to check all HTML content files:
 
 ### Home:
+
 - x1 warning 
+
 ![home](/readmeimages/html_home.png)
 
 ### Dashboard:
-- 
+
+- x3 warnings
+
 ![dashboard](/readmeimages/html_dashboard.png)
 
 ### Profile:
+
 - x1 warning 
+
 ![profile](/readmeimages/html_profile.png)
 
 ### Add Session:
+
 - x1 warning 
+
 ![add session](/readmeimages/html_addsession.png)
 
 ### Edit Session:
+
 - x1 warning 
+
 ![edit session](/readmeimages/html_editsession.png)
 
 ### Delete Session:
+
 - x1 warning 
+
 ![delete session](/readmeimages/html_deletesession.png)
 
 # [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) to check all CSS content files:
