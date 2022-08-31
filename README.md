@@ -159,6 +159,10 @@ These significant bugs were found during user testing and during the build proce
 ## 6.3 Code Validation
 [Code Validation](codevalidation.md)
 
+## 6.4 Performance testing
+![Lighthouse](/readmeimages/lighthouse.png)
+
+
 
 
 # 7. Deployment
