@@ -65,6 +65,14 @@
 - x1 warning 
 ![add session](/readmeimages/html_addsession.png)
 
+### Edit Session:
+- x1 warning 
+![edit session](/readmeimages/html_editsession.png)
+
+### Delete Session:
+- x1 warning 
+![delete session](/readmeimages/html_deletesession.png)
+
 # [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) to check all CSS content files:
 
 ## CSS:
