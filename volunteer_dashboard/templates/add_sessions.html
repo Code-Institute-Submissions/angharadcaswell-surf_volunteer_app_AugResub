@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="centre_div text-white">
+<div class="centre_div">
             <h2 class="mt-3"> Session Form </h2>
             <form method="post" action="{% url 'add_sessions' %}" enctype="multipart/form-data" >
                 {{ form | crispy }}
