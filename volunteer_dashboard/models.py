@@ -17,6 +17,7 @@ class VolunteerProfile(models.Model):
             return "Anonymous"
         return self.user.username
 
+
 class Session(models.Model):
     date = models.DateField()
     time = models.TimeField()

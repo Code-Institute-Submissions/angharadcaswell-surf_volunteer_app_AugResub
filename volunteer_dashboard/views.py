@@ -77,4 +77,3 @@ class EditSession(generic.UpdateView):
         """
         form.save()
         return super().form_valid(form)
-
