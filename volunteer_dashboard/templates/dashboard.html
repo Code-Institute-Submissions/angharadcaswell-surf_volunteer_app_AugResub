@@ -32,7 +32,7 @@
                 {% if session.upcoming_date %}
                     <div class="card card-body text-center text-white pt-5" >
                         <i class="far fa-calendar-alt py-2 calender-icon"></i>
-                        <h3 class="card-title">{{ session.date|date:"d M Y" }}</h5>
+                        <h3 class="card-title">{{ session.date|date:"d M Y" }}</h3>
                         <p class="card-text">{{ session.time }}</p>
                         {% if user.is_superuser %}
                         <div class="row">
@@ -40,7 +40,7 @@
                                 <a href="{% url 'edit_session' session.pk %}" class="btn btn-primary btn-surf btn-edit">Edit</a>
                             </div>
                             <div class="col-sm-6">
-                                <a href="{% url 'delete_session' session.pk %}"><button class="btn btn-danger btn-delete">Delete</button>
+                                <a href="{% url 'delete_session' session.pk %}" class="btn btn-danger btn-delete">Delete
                                   </a>
                             </div>
                         </div>

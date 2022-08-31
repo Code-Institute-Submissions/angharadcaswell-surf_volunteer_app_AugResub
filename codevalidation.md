@@ -1,4 +1,4 @@
-[PEP8 Python Validator](http://pep8online.com/) to check all Python content files:
+# [PEP8 Python Validator](http://pep8online.com/) to check all Python content files:
 
 ## Home APP
 ### apps.py:
@@ -47,11 +47,17 @@
 ### views.py:
 ![views.py](/readmeimages/views_py_dash.png)
 
-[HTML Validator](https://validator.w3.org/#validate_by_input) to check all HTML content files:
+# [HTML Validator](https://validator.w3.org/#validate_by_input) to check all HTML content files:
 
-All passed
+### Home:
+- x1 warning 
+![home](/readmeimages/html_home.png)
 
-[CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) to check all CSS content files:
+### Dashbaord:
+- x1 warning 
+![dashboard](/readmeimages/html_dashboard.png)
+
+# [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) to check all CSS content files:
 
 ## CSS:
 ![CSS](/readmeimages/css_test.png)

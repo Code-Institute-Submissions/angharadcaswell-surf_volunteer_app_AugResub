@@ -156,6 +156,14 @@ These significant bugs were found during user testing and during the build proce
 2. Users can access edit and delete sessions urls even if they aren't logged in as admin. 
 - **Solution**: Currently this can only be accessed by typing the url as there are conditional statements to stop user accessing it via the dashboard. It would be great to make the good more robust, this will be addressed to the next iteration. 
 
+3. An error was throwing that stopping Heroku from building the live site. It was due to editing the length of the code after valditing with PEP. 
+
+![Cloudinary bug](/readmeimages/cloudinary_bug.png)
+
+- **Solution**: Change syntax to use brackets which fixed the issue. 
+
+![Fixed bug](/readmeimages/fixed_bug.png)
+
 ## 6.3 Code Validation
 [Code Validation](codevalidation.md)
 
