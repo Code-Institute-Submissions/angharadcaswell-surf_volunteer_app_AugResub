@@ -130,7 +130,7 @@ message.
 The site was tested in Gitpod terminal and Heroku by users and myself on all browsers. The site was also peer reviewed by the Code Institute community. 
 
 ## 6.1 User testing:
-Users were asked to navigate around the site and also to make intentional mistakes to help check for errors.
+Users were asked to navigate around the site and also to make intentional mistakes to help check for errors. Some users were asked to test on mobile to check the responsive usability. 
 Users had tasks to complete, which included the following:
 
 1. Register and log into the site. 
