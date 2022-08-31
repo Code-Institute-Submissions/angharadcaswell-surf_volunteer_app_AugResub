@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row">
       <div class="col-sm">
-        <div class="card card-body text-white" >
-          <h2 class="my-3 ">Your Profile:</h2>
+        <div class="card card-body" >
+          <h2 class="my-3">Your Profile:</h2>
         <hr>
             <img src=" {{ user.profile.photo.url }}" class="dashboard-profile-img" alt="profileimage">
             <br>
@@ -17,8 +17,8 @@
         </div>
       </div>
         <div class="col-sm">
-      <div class="card card-body text-white">
-        <h2 class="my-3 ">Edit Profile:</h2>
+      <div class="card card-body">
+        <h2 class="my-3">Edit Profile:</h2>
         <hr>
         <form method="post" enctype="multipart/form-data">
                 {{ user_form|crispy }}
