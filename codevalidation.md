@@ -53,9 +53,17 @@
 - x1 warning 
 ![home](/readmeimages/html_home.png)
 
-### Dashbaord:
-- x1 warning 
+### Dashboard:
+- 
 ![dashboard](/readmeimages/html_dashboard.png)
+
+### Profile:
+- x1 warning 
+![profile](/readmeimages/html_profile.png)
+
+### Add Session:
+- x1 warning 
+![add session](/readmeimages/html_addsession.png)
 
 # [CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) to check all CSS content files:
 

@@ -7,7 +7,7 @@
             <form method="post" action="{% url 'add_sessions' %}" enctype="multipart/form-data" >
                 {{ form | crispy }}
                 {% csrf_token %}
-                <button type="submit"class="btn btn-surf mb-3" >Save</button>
+                <button type="submit" class="btn btn-surf mb-3" >Save</button>
             </form>
 </div>
 {% endblock %}
