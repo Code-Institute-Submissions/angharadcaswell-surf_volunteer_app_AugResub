@@ -157,7 +157,7 @@ These significant bugs were found during user testing and during the build proce
 - **Solution**: Currently this can only be accessed by typing the url as there are conditional statements to stop user accessing it via the dashboard. It would be great to make the good more robust, this will be addressed to the next iteration. 
 
 ## 6.3 Code Validation
-- Used [PEP8 Python Validator](http://pep8online.com/) to check all Python content files. Each file recieved "All Right".
+[Code Validation](codevalidation.md)
 
 
 
