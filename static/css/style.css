@@ -7,7 +7,7 @@ body, html {
   h1 {
     font-family:'Raleway', sans-serif;
     font-weight: 150;
-    color: #FFF;
+    color: black;
   }
 
  .project-header-logo {
@@ -77,7 +77,7 @@ form a {
 }
 .home-css h2 {
   font-size: 20px;
-  color: #FFF !important;
+  color: black !important;
   padding-top: 20px;
   padding-left: 20px;
 }
@@ -138,7 +138,7 @@ form a {
 h2 {
   font-family:'Raleway', sans-serif;
     font-weight: 100;
-    color: #FFF;
+    color: black;
 
 }
 

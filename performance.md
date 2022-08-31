@@ -1,4 +1,4 @@
-Every page was checked with Chrome dev tool, Light house:
+Every page was checked with Chrome dev tool, Lighthouse:
 
 ### Home:
 ![home](/readmeimages/home_lighthouse.png)
@@ -21,3 +21,4 @@ Every page was checked with Chrome dev tool, Light house:
 
 Takeaways:
 - Next iteration it would be important to improve performance scores and this would mainly involve improve image loading. 
+- Some of the color contrasts could be further improved to help accesibility. 
