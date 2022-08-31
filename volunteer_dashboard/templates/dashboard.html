@@ -37,10 +37,10 @@
                         {% if user.is_superuser %}
                         <div class="row">
                             <div class="col-sm-6">
-                                <a href="{% url 'edit_session' session.pk %}" class="btn btn-primary btn-surf btn-edit">Edit</a>
+                                <a href="{% url 'edit_session' session.pk %}" class="btn btn-primary btn-surf btn-edit" aria-label="Edit session">Edit</a>
                             </div>
                             <div class="col-sm-6">
-                                <a href="{% url 'delete_session' session.pk %}" class="btn btn-danger btn-delete">Delete
+                                <a href="{% url 'delete_session' session.pk %}" class="btn btn-danger btn-delete" aria-label="Delete session">Delete
                                   </a>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
     
     <hr>
     <h2>Admin:</h2>
-    <a href="{% url 'add_sessions' %}" class="btn btn-primary btn-surf">Add Session</a>
+    <a href="{% url 'add_sessions' %}" class="btn btn-primary btn-surf" aria-label="Add session">Add Session</a>
 {% endif %}
     {% else %}
     <h2 class="dashboard-signedout">Please sign in or register to view the volunteer dashboard</h2>

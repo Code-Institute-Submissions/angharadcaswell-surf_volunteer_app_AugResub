@@ -26,25 +26,25 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white nav-custom">
         <div class="container-fluid">
-                <a class="navbar-brand d-block d-md-none" href="{% url 'home' %}"><h1>PROJECT SURF</h1></a>
+                <a class="navbar-brand d-block d-md-none" href="{% url 'home' %}" aria-label="Homepage"><h1>PROJECT SURF</h1></a>
             
                 <ul class="d-block d-md-none">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{% url 'dashboard' %}">Dashboard</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'dashboard' %}" aria-label="Dashbaord">Dashboard</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li>
-                        <a href="{% url 'profile' %}" class="nav-link">Profile</a>
+                        <a href="{% url 'profile' %}" class="nav-link" aria-label="Profile">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link" href="{% url 'account_logout' %}" aria-label="log out">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Sign up</a>
+                        <a class="nav-link" href="{% url 'account_signup' %}" aria-label="Sign up">Sign up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link" href="{% url 'account_login' %}" aria-label="Login">Login</a>
                     </li>
                     
                     {% endif %}
@@ -64,15 +64,15 @@
                         <a href="{% url 'profile' %}" class="nav-link">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link" href="{% url 'account_logout' %}" aria-label="log out">Logout</a>
                     </li>
 
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Sign up</a>
+                        <a class="nav-link" href="{% url 'account_signup' %}" aria-label="Sign up">Sign up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link" href="{% url 'account_login' %}" aria-label="Login">Login</a>
                     </li>
                     
                     {% endif %}
@@ -90,7 +90,7 @@
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">PROJECT SURF</p>
-        <p class="m-0 text-center text-white">Follow us: <a href="https://www.instagram.com/angharadcaswell/" target="_blank"><i class="fab fa-instagram-square ms-3"></i></a>
+        <p class="m-0 text-center text-white">Follow us: <a href="https://www.instagram.com/angharadcaswell/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram-square ms-3"></i></a>
 </p>
     </footer>
 </body>

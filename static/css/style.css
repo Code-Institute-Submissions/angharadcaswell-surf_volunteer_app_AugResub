@@ -1,6 +1,6 @@
 body, html {
     height: 100%;
-    background-color: #388697;
+    background-color: #165764
     
   }
 
@@ -121,7 +121,7 @@ form a {
   bottom: 200px;
   right: 200px;
   position: absolute !important;
-  background-color: rgba(31, 122, 140, 0.7);
+  background-color: #165764;
 }
 
 
